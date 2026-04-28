@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="300">
+  <title>Zasobniky</title>
+  <style>
+    :root {
+      --bg:     #0d0f18;
+      --card:   #161925;
+      --border: #252838;
+      --text:   #dde3f0;
+      --muted:  #5a6380;
+      --accent: #4f7cff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 1.2rem 0.8rem;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.2rem 1rem;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 6px 30px rgba(0,0,0,.6);
+    }
+    .header { margin-bottom: 1rem; }
+    h1 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: .03em;
+    }
+    .subtitle {
+      font-size: .72rem;
+      color: var(--muted);
+      margin-top: .2rem;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    td {
+      padding: .55rem 0;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+    tr:last-child td { border-bottom: none; }
+    td.name {
+      font-size: .85rem;
+      font-weight: 600;
+      white-space: nowrap;
+      width: 90px;
+    }
+    td.bar-cell { padding-left: .5rem; padding-right: .5rem; }
+    td.pct {
+      font-size: .82rem;
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+      white-space: nowrap;
+      width: 36px;
+      color: var(--muted);
+    }
+    td.dot-cell {
+      text-align: center;
+      width: 24px;
+      padding-left: .4rem;
+    }
+    .bar-wrap {
+      background: var(--border);
+      border-radius: 999px;
+      height: 8px;
+      overflow: hidden;
+    }
+    .bar {
+      height: 100%;
+      border-radius: 999px;
+    }
+    .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .footer {
+      margin-top: .9rem;
+      font-size: .68rem;
+      color: var(--muted);
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <h1>Stav zasobniku</h1>
+      <div class="subtitle">Aktualizovano: 28.04.2026 14:11:47 &nbsp;&middot;&nbsp; Auto-obnova 5 min</div>
+    </div>
+    <table>
+      <tbody>
+        <tr>
+          <td class="name">Zasobnik 1</td>
+          <td class="bar-cell">
+            <div class="bar-wrap">
+              <div class="bar" style="width:15%;background:#e74c3c"></div>
+            </div>
+          </td>
+          <td class="pct">15%</td>
+          <td class="dot-cell"><span class="dot" style="background:#e74c3c"></span></td>
+        </tr>        <tr>
+          <td class="name">Zasobnik 2</td>
+          <td class="bar-cell">
+            <div class="bar-wrap">
+              <div class="bar" style="width:7%;background:#e74c3c"></div>
+            </div>
+          </td>
+          <td class="pct">7%</td>
+          <td class="dot-cell"><span class="dot" style="background:#e74c3c"></span></td>
+        </tr>        <tr>
+          <td class="name">Zasobnik 3</td>
+          <td class="bar-cell">
+            <div class="bar-wrap">
+              <div class="bar" style="width:44%;background:#f0a500"></div>
+            </div>
+          </td>
+          <td class="pct">44%</td>
+          <td class="dot-cell"><span class="dot" style="background:#f0a500"></span></td>
+        </tr>        <tr>
+          <td class="name">Zasobnik 4</td>
+          <td class="bar-cell">
+            <div class="bar-wrap">
+              <div class="bar" style="width:17%;background:#e74c3c"></div>
+            </div>
+          </td>
+          <td class="pct">17%</td>
+          <td class="dot-cell"><span class="dot" style="background:#e74c3c"></span></td>
+        </tr>        <tr>
+          <td class="name">Zasobnik 5</td>
+          <td class="bar-cell">
+            <div class="bar-wrap">
+              <div class="bar" style="width:88%;background:#2ecc71"></div>
+            </div>
+          </td>
+          <td class="pct">88%</td>
+          <td class="dot-cell"><span class="dot" style="background:#2ecc71"></span></td>
+        </tr>        <tr>
+          <td class="name">Zasobnik 6</td>
+          <td class="bar-cell">
+            <div class="bar-wrap">
+              <div class="bar" style="width:2%;background:#e74c3c"></div>
+            </div>
+          </td>
+          <td class="pct">2%</td>
+          <td class="dot-cell"><span class="dot" style="background:#e74c3c"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="footer">ZasobnikyMonitor</div>
+  </div>
+</body>
+</html>
